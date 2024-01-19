@@ -1,0 +1,303 @@
+@import url("https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,400;0,500;1,400&family=Satisfy&display=swap");
+
+:root {
+  --primary-color: #316a41;
+  --on-primary-color: #ffffff;
+  --primary-container-color: #b4f1be;
+  --on-primary-container-color: #00210c;
+  --secondary-color: #506352;
+  --on-secondary-color: #ffffff;
+  --secondary-container-color: #d3e8d3;
+  --on-secondary-container-color: #0e1f12;
+
+  --surface-color: #f6fbf3;
+  --on-surface-color: #181d18;
+  --surface-container-color: #ebefe7;
+}
+
+html,
+body {
+  margin: 0;
+}
+
+/* Global Styles */
+
+body {
+  background-color: var(--surface-color);
+  color: var(--on-surface-color);
+  font-family: "Mulish", sans-serif;
+}
+
+/* Typography */
+
+.display-text {
+  font-family: "Satisfy", cursive;
+  font-weight: 400;
+  font-size: calc(2.31rem + 1.5vw);
+  line-height: 5.33rem;
+  letter-spacing: -0.02rem;
+}
+
+.headline-large {
+  font-family: "Satisfy", cursive;
+  font-weight: 400;
+  font-size: calc(1.88rem + 0.5vw);
+  line-height: 3.33rem;
+  letter-spacing: 0;
+}
+
+.headline-small {
+  font-family: "Satisfy", cursive;
+  font-weight: 400;
+  font-size: calc(1.5rem + 0.32vw);
+  line-height: 2.67rem;
+  letter-spacing: 0;
+}
+
+.body-text {
+  font-weight: 400;
+  font-size: calc(0.75rem + 0.16vw);
+  line-height: 1.33rem;
+  letter-spacing: 0.03rem;
+}
+
+.label-large {
+  font-weight: 500;
+  font-size: calc(1rem + 0.12vw);
+  line-height: 1.67rem;
+  letter-spacing: 0.01rem;
+}
+
+.label-small {
+  font-weight: 500;
+  font-size: calc(0.63rem + 0.2vw);
+  line-height: 1.33rem;
+  letter-spacing: 0.04rem;
+}
+
+/* Finer Responsive Typography */
+
+@media(max-width: 293px) {
+  .body-text {
+    letter-spacing: 0.05rem;
+  }
+
+  .label-small {
+    letter-spacing: 0.06rem;
+  }
+}
+
+/* Containers */
+
+.container-center {
+  max-width: 28.13rem;
+  margin: 0 auto;
+}
+
+/* Links */
+
+.link {
+  text-decoration: none;
+  display: inline-block;
+  margin: 1.25rem;
+  border-radius: 1.5rem;
+}
+
+.link--primary {
+  background-color: var(--primary-color);
+  color: var(--on-primary-color);
+}
+
+.link--primary__state-layer {
+  padding: 0.63rem 1.25rem;
+  border-radius: inherit;
+}
+
+.link--primary:hover .link--primary__state-layer {
+  background-color: rgba(255, 255, 255, 0.08);
+}
+
+.link--secondary {
+  border: 2px solid var(--secondary-color);
+  color: var(--secondary-color);
+}
+
+.link--secondary__state-layer {
+  padding: 0.56rem 1.13rem;
+  border-radius: inherit;
+}
+
+.link--secondary:hover .link--secondary__state-layer {
+  background-color: var(--secondary-container-color);
+}
+
+/* Lists */
+
+.list-non-bulleted {
+  list-style: none;
+}
+
+.list-inline-item {
+  display: inline;
+}
+
+/* Nav */
+
+.navbar {
+  background-color: var(--primary-container-color);
+  color: var(--on-primary-container-color);
+  padding: 1rem 2rem;
+  border-bottom-right-radius: 2rem;
+}
+
+.navbar__heading {
+  margin: 0;
+  position: absolute;
+  left: 2rem;
+}
+
+.navbar__list {
+  margin: 0;
+  margin-top: 0.5rem;
+  text-align: right;
+}
+
+.navbar__list__item {
+  margin: 0 1.5rem;
+}
+
+.navbar__list__item__link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.navbar__list__item__link:hover {
+  text-decoration: underline;
+}
+
+.navlink-active {
+  text-decoration: underline;
+}
+
+/* Responsive Navbar */
+
+@media(max-width: 730px) {
+  .navbar {
+    text-align: center;
+  }
+
+  .navbar__heading {
+    position: static;
+  }
+
+  .navbar__list {
+    text-align: center;
+  }
+
+  @media(max-width: 530px) {
+    .navbar__list {
+      padding-inline-start: 0;
+      list-style-type: none;
+    }
+
+    .navbar__list__item {
+      display: list-item;
+    }
+  }
+}
+
+/* Header */
+
+.header {
+  margin-top: 2.5rem;
+  text-align: center;
+}
+
+.header__image {
+  display: block;
+  margin: 0 auto;
+  max-width: 50%;
+}
+
+.header__text {
+  margin-block-start: 1rem;
+  padding: 0 2rem;
+}
+
+/* Responsive Header */
+
+@media(max-width: 1400px) {
+  .header__image {
+    max-width: 75%;
+  }
+}
+
+@media(max-width: 1022px) {
+  .header__text__additional-info {
+    display: block;
+  }
+}
+/* Reduce padding at 405px to prevent overflow */
+/* May add media queries when addressing mobile widths below 300px; This is because after a certain threshold, text looks too small for their respective viewports. */
+
+/* Sections */
+
+.section {
+  padding: 2rem 0;
+}
+
+.section__heading {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.section--off-white {
+  background-color: var(--surface-container-color);
+  border-radius: 2rem 0 2rem 0;
+}
+
+/* Footer */
+
+.footer {
+  padding: 2rem 0;
+  text-align: center;
+  background-color: var(--primary-container-color);
+  color: var(--on-primary-container-color);
+  border-top-right-radius: 2rem;
+}
+
+.footer__list {
+  padding-inline-start: 0;
+}
+
+.footer__list__item__link {
+  margin-top: 0;
+  margin-bottom: 0;
+  color: inherit;
+}
+
+.footer__list__item__link__state-layer {
+  padding: 0.5rem 1rem;
+  border-radius: inherit;
+}
+
+.footer__list__item__link__state-layer:hover {
+  background-color: rgba(49, 106, 65, 0.08);
+}
+
+/* Responsive Footer */
+
+@media(max-width: 423px) {
+  .footer{
+    text-align: left;
+  }
+
+  .footer__heading {
+    margin-left: 2.25rem;
+  }
+
+  .footer__list__item {
+    display: list-item;
+  }
+}

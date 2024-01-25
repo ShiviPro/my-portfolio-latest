@@ -13,6 +13,9 @@
   --surface-color: #f6fbf3;
   --on-surface-color: #181d18;
   --surface-container-color: #ebefe7;
+  --surface-container-highest-color: #dfe4dc;
+  
+  --outline-color: #c1c9bf;
 }
 
 html,
@@ -328,4 +331,56 @@ body {
 
 .hobbies-section-content__list-item:last-of-type {
   margin-bottom: 0;
+}
+
+/* Skills */
+
+.skills-table {
+  width: 80%;
+  margin: 0 auto;
+  table-layout: fixed;
+  border: 2px solid var(--outline-color);
+  border-collapse: collapse;
+}
+
+.skills-table__heading {
+  margin-bottom: 1rem;
+}
+
+.skills-table__col-header:nth-of-type(1) {
+  width: 30%;
+}
+
+.skills-table__col-header:nth-of-type(2) {
+  background-color: var(--surface-container-highest-color);
+  text-align: left;
+  padding-left: 1rem;
+}
+
+.skills-table__row:nth-of-type(odd) {
+  background-color: var(--surface-color);
+}
+
+.skills-table__row__header {
+  background-color: var(--surface-container-highest-color);
+}
+
+.skills-table th, .skills-table td {
+  border: 1px solid var(--outline-color);
+}
+
+.skills-table__row__content-list {
+  padding-inline-start: 2rem;
+}
+
+.skill-logo {
+  width: calc(2.5rem + 1.3vw);
+}
+
+.nodejs-logo {
+  width: calc(5rem + 1.92vw);
+}
+
+.netlify-logo {
+  width: calc(6.5rem + 2.25vw);
 }

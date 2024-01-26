@@ -347,17 +347,25 @@ body {
 
 /* Hobbies */
 
-.hobbies-section-content-list {
+.hobbies-section__content-list {
   padding-inline-start: 0;
   margin-block-end: 0;
 }
 
-.hobbies-section-content-list__item {
+.hobbies-section__content-list__item {
   margin-bottom: 1rem;
 }
 
-.hobbies-section-content-list__item:last-of-type {
+.hobbies-section__content-list__item:last-of-type {
   margin-bottom: 0;
+}
+
+/* Responsive Hobbies */
+
+@media(max-width: 550px) {
+  .hobbies-section {
+    max-width: 100%;
+  }
 }
 
 /* Skills */

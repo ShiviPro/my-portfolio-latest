@@ -320,21 +320,29 @@ body {
 
 /* About Me */
 
-.about-section-content {
+.about-section__content {
   padding-inline-start: 0;
 }
 
-.about-section-content__list-item {
+.about-section__content__list-item {
   margin-bottom: 1rem;
 }
 
-.about-section-content__list-item:last-of-type {
+.about-section__content__list-item:last-of-type {
   margin-bottom: 0;
 }
 
 .code-emoji {
   background-color: var(--on-surface-color);
   color: var(--surface-color);
+}
+
+/* Responsive About Me */
+
+@media(max-width: 550px) {
+  .about-section {
+    max-width: 100%;
+  }
 }
 
 /* Hobbies */

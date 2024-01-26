@@ -335,7 +335,7 @@ body {
 
 /* Skills */
 
-.skills-table {
+.skills-section__table {
   width: 80%;
   margin: 0 auto;
   table-layout: fixed;
@@ -343,34 +343,35 @@ body {
   border-collapse: collapse;
 }
 
-.skills-table__heading {
+.skills-section__table__heading {
   margin-bottom: 1rem;
 }
 
-.skills-table__col-header:nth-of-type(1) {
+.skills-section__table__col-header:nth-of-type(1) {
   width: 30%;
 }
 
-.skills-table__col-header:nth-of-type(2) {
+.skills-section__table__col-header:nth-of-type(2) {
   background-color: var(--surface-container-highest-color);
   text-align: left;
   padding-left: 1rem;
 }
 
-.skills-table__row:nth-of-type(odd) {
+.skills-section__table__row:nth-of-type(odd) {
   background-color: var(--surface-color);
 }
 
-.skills-table__row__header {
+.skills-section__table__row__header {
   background-color: var(--surface-container-highest-color);
 }
 
-.skills-table th, .skills-table td {
+.skills-section__table th, .skills-section__table td {
   border: 1px solid var(--outline-color);
 }
 
-.skills-table__row__content-list {
+.skills-section__table__row__content-list {
   padding-inline-start: 2rem;
+  padding-right: 1rem;
 }
 
 .skill-logo {
@@ -383,4 +384,53 @@ body {
 
 .netlify-logo {
   width: calc(6.5rem + 2.25vw);
+}
+
+/* Responsive Skills Section */
+
+@media(max-width: 850px) {
+  .skills-section__table {
+    width: 90%;
+  }
+}
+
+@media(max-width: 720px) {
+  .skills-section__table {
+    width: 100%;
+  }
+}
+
+@media(max-width: 550px) {
+  .netlify-logo {
+    width: calc(2.5rem + 4.3vw);
+  }
+}
+
+@media(max-width: 475px) {
+  .skills-section {
+    padding: 1rem;
+    padding-bottom: 1.5rem;
+    max-width: 100%;
+    border-radius: 0;
+  }
+
+  .skills-section__table__heading {
+    margin-bottom: 0.25rem;
+  }
+}
+
+@media(max-width: 375px) {
+  .skills-section {
+    padding: 0.5rem;
+    padding-bottom: 1rem;
+  }
+
+  .skills-section__table__heading {
+    margin-bottom: 0;
+  }
+
+  .nodejs-logo {
+    width: calc(2.5rem + 1.3vw);
+  }
+
 }

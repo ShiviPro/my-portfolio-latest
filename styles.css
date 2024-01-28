@@ -281,6 +281,7 @@ body {
   background-color: var(--primary-container-color);
   color: var(--on-primary-container-color);
   border-top-right-radius: 2rem;
+  margin-top: 2rem;
 }
 
 .footer__list {
@@ -315,6 +316,12 @@ body {
 
   .footer__list__item {
     display: list-item;
+  }
+}
+
+@media(max-width: 235px) {
+  .footer__heading__extra-txt {
+    display: none;
   }
 }
 
